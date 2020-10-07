@@ -13,7 +13,7 @@ class GameApp extends Phaser.Game {
             GameApp.gameConfig = {
                 type: Phaser.AUTO,
                 parent: "content",
-                backgroundColor: '#385e78',
+                backgroundColor: '#faefde',
                 width: window.innerWidth,
                 height: window.innerHeight,
                 scene: [BootScene, PreloadScene, MainScene]
