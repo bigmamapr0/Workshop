@@ -64,7 +64,7 @@ class SinglePlayer extends Phaser.Scene {
     }
 
     increaseScore() {
-        if (this._count < 100) {
+        if (this._count <= 99) {
             this._count += 1;
             this.player.text = this._count.toString();        
         

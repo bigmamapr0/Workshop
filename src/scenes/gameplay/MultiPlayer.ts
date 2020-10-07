@@ -88,24 +88,33 @@ class MultiPlayer extends Phaser.Scene {
     }
 
     increaseScoreForPlayer1() {
-        if (this._count1 < 100) {
+        if (this._count1 <= 99) {
             this._count1 += 1;
-            this.player1.text = this._count1.toString();        
-        
+            this.player1.text = this._count1.toString();
+            
         } else {
-            this._count1 = 100;   
+            this.checkForWinner();
             this.restartGame();
         }
     }
 
     increaseScoreForPlayer2() {
-        if (this._count2 < 100) {
+        if (this._count2 <= 99) {
             this._count2 += 1;
-            this.player2.text = this._count2.toString();        
-        
+            this.player2.text = this._count2.toString();
         } else {
-            this._count2 = 100;         
+            this.checkForWinner();
             this.restartGame();
+        }
+    }
+
+    checkForWinner() {
+        if (this._count1 > this._count2) {
+            this.player1.text = "YOU WIN!";
+            this._count1 = 100;
+        } else {
+            this.player2.text = "YOU WIN!";
+            this._count2 = 100;
         }
     }
     

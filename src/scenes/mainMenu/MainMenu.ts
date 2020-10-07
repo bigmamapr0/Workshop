@@ -25,7 +25,7 @@ class MainMenu extends Phaser.Scene {
         })
 
         this.exit.on('pointerdown', () => {
-            this.scene.start();
+            this.scene.start("quit");
         })
     }
 }
