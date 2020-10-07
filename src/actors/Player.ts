@@ -1,7 +1,7 @@
 class Player extends Phaser.GameObjects.Text {
 
-    constructor(scene: Phaser.Scene, x, y, text, {}) {
-        super(scene, x, y, text, {});
+    constructor(scene: Phaser.Scene, x, y, score, fill) {
+        super(scene, x, y, score, fill);
     }
 
     update() {
