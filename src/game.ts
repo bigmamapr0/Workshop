@@ -14,8 +14,8 @@ class GameApp extends Phaser.Game {
                 type: Phaser.AUTO,
                 parent: "content",
                 backgroundColor: '#385e78',
-                width: 1024,
-                height: 512,
+                width: window.innerWidth,
+                height: window.innerHeight,
                 scene: [BootScene, PreloadScene, MainScene]
             };
         }
