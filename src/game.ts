@@ -1,8 +1,9 @@
 import 'phaser';
-import { BootScene } from './scenes/Boot';
-import { PreloadScene } from './scenes/Preload';
-import { MainScene } from './scenes/Main';
-import { SinglePlayer } from './scenes/SinglePlayer';
+import { Boot } from './scenes/booting/Boot';
+import { Preload } from './scenes/booting/Preload';
+import { SinglePlayer } from './scenes/gameplay/SinglePlayer';
+import { MainMenu } from './scenes/mainMenu/MainMenu';
+import { MultiPlayer } from './scenes/gameplay/MultiPlayer';
 
 class GameApp extends Phaser.Game {
     public static gameConfig: Phaser.Types.Core.GameConfig = null;
@@ -14,10 +15,10 @@ class GameApp extends Phaser.Game {
             GameApp.gameConfig = {
                 type: Phaser.AUTO,
                 parent: "content",
-                backgroundColor: '#6b6565',
+                backgroundColor: '#ffffff',
                 width: window.innerWidth,
                 height: window.innerHeight,
-                scene: [BootScene, PreloadScene, MainScene, SinglePlayer]
+                scene: [Boot, Preload, MainMenu, SinglePlayer, MultiPlayer]
             };
         }
 
